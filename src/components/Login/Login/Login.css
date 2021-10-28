@@ -1,0 +1,21 @@
+/* .login-container{
+    height: 80vh;
+    background-image: url("../../../images/background.png");
+    background-size: cover;
+    background-position: center center;
+    opacity: .3;
+} */
+.login-container{
+    height: 80vh;
+    position: relative;
+    z-index:1;
+    overflow: hidden; /*if you want to crop the image*/
+}
+.login-container:before{
+    z-index:-1;
+    position:absolute;
+    left:0;
+    top:0;
+    content: url("../../../images/background.png");
+    opacity: .3;
+}
